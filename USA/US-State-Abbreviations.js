@@ -1,21 +1,36 @@
-// Regular Expressions to test if a United States State Abbreviation is Valad.
+/// Validation for U.S. state abbreviations. 
 
-// Force each state abbreviation to be capitalized. 
+
+// Capitalization enforced. EX: AL, TX, MT, ect..  
 function isStateValid(str){
 	let states = /^A[LKSZRAEP]|C[AOT]|D[EC]|F[LM]|G[AU]|HI|I[ADLN]|K[SY]|LA|M[ADEHINOPST]|N[CDEHJMVY]|O[HKR]|P[ARW]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY]/;
 	states.test(str) ? console.log('This is a valid state.') : console.log('This is not a valid state.')
 }
 
-// 
+
+// All 50 abbreviations in capital letters. 
+ let usStates = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
+
+
+// Use this function to test if desired. 
+  usStates.forEach(state => isStateValid(state));
+
+
+///////////////////////////////////////////////////////////////////////////
+
+
+// Capitalization not enforced. Ex: Al,tx,mT ect...
 function isStateValid(str){
 	let states = /^A[LKSZRAEP]|C[AOT]|D[EC]|F[LM]|G[AU]|HI|I[ADLN]|K[SY]|LA|M[ADEHINOPST]|N[CDEHJMVY]|O[HKR]|P[ARW]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY]/i;
 	states.test(str) ? console.log('This is a valid state.') : console.log('This is not a valid state.')
 }
 
 
+// State abbreviations with random capitalization. 
+ let usStates = ['al','AK','Az','AR','ca','cO','CT','DE','FL','Ga','HI','id','IL','In','IA','KS','KY','la','ME','MD','mA','MI','Mn','MS','MO','MT','NE','NV','nh','NJ','Nm','NY','nc','ND','oH','ok','Or','PA','rI','SC','sd','TN','TX','Ut','VT','VA','wA','WV','WI','Wy'];
 
-// An array of every state abbreviation for testing purposes.
- let usStates = ['AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
 
-// copy in this code to test if every state functions as you want it to.
+// Use this function to test if desired. 
   usStates.forEach(state => isStateValid(state));
+
+  
